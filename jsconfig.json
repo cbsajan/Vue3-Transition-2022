@@ -15,5 +15,13 @@
       "dom.iterable",
       "scripthost"
     ]
-  }
+  },
+  "vueCompilerOptions":{
+    "experimentalDisableTemplateSupport": true,
+    "vue/multi-word-component-names": ["error", {
+      "ignores": []
+      
+    },
+  ],
+  } 
 }
