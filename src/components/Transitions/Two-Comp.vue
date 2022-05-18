@@ -4,7 +4,7 @@
             Toggle status
         </button>
         <br><br>
-        <transition mode="out-in" name="custom" enter-active-class="dog" leave-active-class="cat">
+        <transition mode="out-in" name="custom" enter-active-class="dog_new" leave-active-class="cat">
             <div class="p-3 mb-2 bg-danger text-white" v-if="!status" key="status_off">OFF</div>
             <div class="p-3 mb-2 bg-success text-white" key="status_on" v-else>ON</div>
         </transition>
@@ -28,7 +28,7 @@ export default {
     opacity: 0;
 }
 
-.dog,
+.dog_new,
 .cat {
     transition: .3s;
 }
