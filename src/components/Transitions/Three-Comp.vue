@@ -8,19 +8,31 @@
     <hr />
     <div>
         <ul class="pl-0">
-            <transition-group name="fade">
+            <transition-group name="fade" appear>
                 <li class="list-group-item" v-for="(item, index) in list" @click="removeItem(index)" :key="item">
                     {{ item }}
                 </li>
             </transition-group>
         </ul>
+
+        <hr />
+
+        <transition name="fade" appear="">
+            <comp-hello></comp-hello>
+        </transition>
+
+
     </div>
 
 </template>
 
 
 <script>
+import compHello from './Hello-Comp.vue';
 export default {
+    components: {
+        compHello
+    },
     data() {
         return {
             list: ['Francis', 'Ron', 'Martha'],
@@ -31,8 +43,6 @@ export default {
         addOne() {
             if (!this.list.includes(this.name)) {
                 this.list.unshift(this.name)
-            } else {
-                alert("The Name is already in the list")
             }
         },
         removeItem(index) {
